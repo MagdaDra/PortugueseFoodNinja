@@ -1,0 +1,30 @@
+
+
+#game-screen {
+    display: none;
+    align-content: center;
+    position: relative;
+    overflow: hidden; /* it prevents the objects from leaving the screen */
+    background-color:rgb(0, 170, 255);
+    /* don't put any padding here */
+}
+
+#game-end {
+    display: none;
+}
+
+.start-image {
+    width: 100px;
+}
+
+.foodDiv {
+    background-color: yellow;
+}
+
+.you-won {
+    display: none;
+}
+
+.you-lost {
+    display: none;
+}

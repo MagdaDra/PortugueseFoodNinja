@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Portuguese Food Ninja</title>
 </head>
 <body>
+    <main>
+        <!-- Start Screen - Initially shown on the screen-->
+        <div id="game-intro"> 
+            <img src="../images/ninja-desktop-wallpaper-code-review-github-png-favpng-byt4JxcU7GWWGn2589pPbM0ac.jpg" alt="" class="start-image">
+            <br />
+            <p>Click all the food that appears on the screen. You have 3 lives. If you miss a food, you loose a life. </p>
+            <br />
+            <button id="start-button">Start Game</button>
+        </div>
+
+        <div id="game-container">
+            <div>
+                <p>Score: <span id="score">0</span></p>
+                <p>Lives: <span id="lives">3</span></p>
+            </div>
+
+            <!-- Game-screen - initially hidden using CSS -->
+            <div id="game-screen"></div>
+        </div>
+
+        <!-- Game-end - initially hidden using CSS -->
+        <div id="game-end">
+            <h1 id="game-end-message"></h1>
+
+            
+            <img src="../images/ninja-desktop-wallpaper-code-review-github-png-favpng-byt4JxcU7GWWGn2589pPbM0ac.jpg" alt="" class="start-image">
+
+            <button id="restart-button">Restart</button>
+
+        </div>
+
+    </main>
+    <script src="javascript/food.js"></script>
+    <script src="javascript/game.js"></script>
+    <script src="javascript/script.js"></script>
     
 </body>
 </html>
