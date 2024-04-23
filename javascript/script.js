@@ -18,4 +18,6 @@ window.onload = function () {
         newGame.start()
     }
 
+    //const imgsArray = ["../images/—Pngtree—egg custard tart dimsum yumcha_7456513.png", "../images/kindpng_1592918.png", "../images/pngegg.png"]
+
 }

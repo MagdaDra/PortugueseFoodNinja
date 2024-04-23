@@ -7,7 +7,7 @@ class Game {
         this.width = 600;
         this.food = [];
         this.score = 0;
-        this.lives = 3;
+        this.lives = 50;
         this.gameIsOver = false;
         this.gameIntervalId = null;
         this.gameLoopFrequency = Math.floor(1000/60)
@@ -58,20 +58,24 @@ class Game {
     }
 
 
+
     update(){
 
         //remove "&& this.food.length < 1" for more obstacles to appear or increase the number
 
 
         if( this.food.length < 1 ) {
+            
             this.food.push(new Food(this.gameScreen, this))
         }
 
 
         for(let i = 0; i < this.food.length; i++){
             const foodItem = this.food[i]
+            
+            //foodItem.randomImg();
 
-            foodItem.move()
+            foodItem.move();
 
 
             if (foodItem.top < -50) {
