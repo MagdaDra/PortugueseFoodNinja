@@ -35,21 +35,10 @@ class Game {
         this.gameIntervalId = setInterval(() => {
             this.gameLoop()
         }, this.gameLoopFrequency)
-        
-        //add the click here?
-/*         window.onload = function () {
-            document.querySelectorAll('.foodDiv').forEach((movingFood) => {
-                movingFood.addEventListener('click', () => {
-                    //movingFood.remove();
-                    //this.food.splice(game.food.indexOf(movingFood), 1);
-                    this.score += 10;
-                    let scoreDisplayed = document.getElementById("score");
-                    scoreDisplayed.innerHTML = this.score;
-                 })
-            })
-        } */
 
     }
+
+
 
     gameLoop(){
         this.update()
@@ -58,10 +47,24 @@ class Game {
         }
     }
 
+
+    removeFood(foodItem){
+        foodItem.element.remove();
+        const foodIndex = this.food.indexOf(foodItem)
+        this.food.splice(foodIndex, 1);
+        this.score += 10;
+        let scoreDisplayed = document.getElementById("score");
+        scoreDisplayed.innerHTML = this.score;
+    }
+
+
     update(){
 
-        if(Math.random() > 0.98 && this.food.length < 1) { //remove "&& this.food.length < 1" for more obstacles to appear or increase the number
-            this.food.push(new Food(this.gameScreen)) 
+        //remove "&& this.food.length < 1" for more obstacles to appear or increase the number
+
+
+        if( this.food.length < 1 ) {
+            this.food.push(new Food(this.gameScreen, this))
         }
 
 
@@ -90,6 +93,9 @@ class Game {
 
         
     }
+
+
+
 
 
     endGame(){

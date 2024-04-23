@@ -18,13 +18,4 @@ window.onload = function () {
         newGame.start()
     }
 
-/*     document.querySelectorAll('.foodDiv').forEach((movingFood) => {
-        movingFood.addEventListener('click', () => {
-            movingFood.remove();
-            game.food.splice(game.food.indexOf(movingFood), 1);
-            game.score += 10;
-            let scoreDisplayed = document.getElementById("score");
-            scoreDisplayed.innerHTML = game.score;
-         })
-    }) */
 }
