@@ -44,7 +44,7 @@ class Food {
 
     move() {
 
-        if (this.game.score < 100){
+        if (this.game.score < 150){
             this.top -= 1;
             this.updatePosition()
         } else {
