@@ -41,16 +41,6 @@ class Food {
         // everything above is run when we call new food in the game file. Including functions
         
     }
-/* 
-    randomImg() {
-        const imgsArray = ["../images/pasteis-plate.png", "../images/wine.png", "../images/bacalhau.png"]
-        const image = document.createElement("img");
-        image.src = imgsArray[Math.floor(imgsArray.length * Math.random())];
-        console.log(image)
-        image.style.width = `${this.width}px`
-        image.style.width = `${this.width}px`
-        this.element.appendChild(image);
-    } */
 
     move() {
         this.top -= 1;

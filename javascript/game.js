@@ -64,7 +64,7 @@ class Game {
         //remove "&& this.food.length < 1" for more obstacles to appear or increase the number
 
 
-        if( this.food.length < 1 ) {
+        if( this.food.length < 3 ) {
             
             this.food.push(new Food(this.gameScreen, this))
         }
@@ -72,8 +72,6 @@ class Game {
 
         for(let i = 0; i < this.food.length; i++){
             const foodItem = this.food[i]
-            
-            //foodItem.randomImg();
 
             foodItem.move();
 
