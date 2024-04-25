@@ -63,9 +63,25 @@ class Game {
 
         //remove "&& this.food.length < 1" for more obstacles to appear or increase the number
 
-
-        if( this.food.length < 3 ) {
+        // Initial level
+        if(this.score < 50 && this.food.length < 1) {
             
+            this.food.push(new Food(this.gameScreen, this))
+        }
+        // 2nd level
+        if (this.score >= 50 && this.score < 100 && this.food.length < 3) {
+
+            this.food.push(new Food(this.gameScreen, this))
+        }
+        // 3rd level
+        if (this.score >= 100 && this.score < 150 && this.food.length < 5) {
+
+            this.food.push(new Food(this.gameScreen, this))
+        }
+        // 4th level
+
+        if (this.score >= 150 && this.food.length < 7) {
+
             this.food.push(new Food(this.gameScreen, this))
         }
 

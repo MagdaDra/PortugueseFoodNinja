@@ -43,9 +43,16 @@ class Food {
     }
 
     move() {
-        this.top -= 1;
-        this.updatePosition()
+
+        if (this.game.score < 100){
+            this.top -= 1;
+            this.updatePosition()
+        } else {
+            this.top -= 1.5;
+            this.updatePosition()
+        }
     }
+
 
     updatePosition(){
         this.element.style.left = `${this.left}px`
