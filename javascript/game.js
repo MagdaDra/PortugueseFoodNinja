@@ -35,7 +35,6 @@ class Game {
         this.gameIntervalId = setInterval(() => {
             this.gameLoop()
         }, this.gameLoopFrequency)
-
     }
 
 

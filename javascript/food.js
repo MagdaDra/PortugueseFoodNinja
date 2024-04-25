@@ -25,10 +25,26 @@ class Food {
         this.element.style.left = `${this.left}px`;
         this.element.style.top = `${this.top}px`;
         
-        const imgsArray = ["../images/pasteis-plate.png", "../images/wine.png", "../images/bacalhau.png"]
+        this.imgsArray = [];
+        const pasteisPlate = "../images/pasteis-plate.png";
+        const wine = "../images/wine.png";
+        const bacalhau = "../images/bacalhau.png";
+
+
+        if (game.score < 50){
+           this.imgsArray.push(pasteisPlate)
+        } 
+        
+        if (game.score >= 50 && game.score <= 100) {
+            this.imgsArray.push(pasteisPlate, wine)
+        } 
+        if (game.score > 100) {
+            this.imgsArray.push(pasteisPlate, wine, bacalhau)
+        }
+
         const image = document.createElement("img");
         
-        image.src = imgsArray[Math.floor(imgsArray.length * Math.random())];
+        image.src = this.imgsArray[Math.floor(this.imgsArray.length * Math.random())];
         image.style.width = `${this.width}px`
         this.element.appendChild(image);
 
