@@ -26,8 +26,8 @@ class Game {
         this.startScreen.style.display = "none"
 
         //show the gameScreen 
-        this.gameContainer.style.display = "block"
-        this.gameScreen.style.display = "block"
+        this.gameContainer.style.display = "flex"
+        this.gameScreen.style.display = "flex"
 
         //remove the endScreen from the page
         this.gameEndScreen.style.display = "none"

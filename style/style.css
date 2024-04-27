@@ -70,11 +70,13 @@ html {
 #game-screen {
     display: none;
     justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden; /* it prevents the objects from leaving the screen */
     background-image: url("../images/wood.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 60px;
     /* don't put any padding here */
 
 }
