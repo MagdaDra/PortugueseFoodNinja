@@ -202,7 +202,7 @@ class Game {
         //Hide the gameScreen
         this.gameScreen.style.display = "none"
         //Show end game screen
-        this.gameEndScreen.style.display = "block"
+        this.gameEndScreen.style.display = "flex"
         let messageDisplayed = document.getElementById("game-end-message");
         messageDisplayed.innerHTML = "You lost!";
         }
