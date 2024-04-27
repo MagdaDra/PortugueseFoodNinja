@@ -1,7 +1,8 @@
 class Game {
     constructor(){
-        this.startScreen = document.getElementById("game-intro")
+        this.startScreen = document.getElementById("game-start")
         this.gameScreen = document.getElementById("game-screen")
+        this.gameContainer = document.getElementById("game-container")
         this.gameEndScreen = document.getElementById("game-end")
         this.height = 600;
         this.width = 600;
@@ -9,11 +10,12 @@ class Game {
         this.bomb = [];
         this.life = [];
         this.score = 0;
-        this.lives = 3;
+        this.lives = 50;
         this.gameIsOver = false;
         this.gameIntervalId = null;
         this.gameLoopFrequency = Math.floor(1000/60)
         this.bombIntervalId = null;
+        
     }
 
     start(){
@@ -24,6 +26,7 @@ class Game {
         this.startScreen.style.display = "none"
 
         //show the gameScreen 
+        this.gameContainer.style.display = "block"
         this.gameScreen.style.display = "block"
 
         //remove the endScreen from the page
@@ -38,6 +41,12 @@ class Game {
         let scoreDisplayed = document.getElementById("score");
         scoreDisplayed.innerHTML = 0;
 
+        //create bombs
+        setInterval(() => {
+           this.bomb.push(new Bomb(this.gameScreen, this))
+        }, 10000)
+
+        console.log('start function')
 
         //start the loop
         this.gameIntervalId = setInterval(() => {
@@ -134,32 +143,29 @@ class Game {
     }
 
     updateBomb() {
-         if( this.score === 20  && this.bomb.length < 1 ||
-            this.score === 100 && this.bomb.length < 1 ||
-            this.score === 150 && this.bomb.length < 1 ||
-            this.score === 150 && this.bomb.length < 1) 
+/* -------------the bomb was set basing on the score ----------------------
+
+            if( this.score === 20  && this.bomb.length < 1 ||
+            this.score === 50 && this.bomb.length < 1 ||
+            this.score === 70 && this.bomb.length < 1 ||
+            this.score === 90 && this.bomb.length < 1)
          
-    //    this.bombIntervalId = setInterval(() => {this.bomb.push(new Bomb(this.gameScreen, this))}, 10000)
-         
-          {
+            {
             this.bomb.push(new Bomb(this.gameScreen, this))
-         }
+            } */
+
+//------------------------------------------------------------------------          
 
          for(let i = 0; i < this.bomb.length; i++){
             const bombItem = this.bomb[i]
 
             bombItem.move();
-    
-/*             this.bombIntervalId = setTimeout(() => {
-                this.endGame()
-            }, 5000)
-
-            console.log(bombItem.wasClicked())
-
-            if(bombItem.wasClicked){
-                clearTimeout(this.bombIntervalId)
-            } */
-
+            
+            if(this.bombIntervalId === null){
+                this.bombIntervalId = setTimeout(() => {
+                    this.endGame()
+                }, 5000)
+            }
         }
     }
 
@@ -168,6 +174,7 @@ class Game {
             this.score === 180 && this.life.length < 1 ||
             this.score === 280 && this.life.length < 1  
         ) {
+
             this.life.push(new Life(this.gameScreen, this))
         }
 

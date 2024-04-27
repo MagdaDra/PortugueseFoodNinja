@@ -42,7 +42,7 @@ class Food extends MovingItem {
             this.top -= 1;
             this.updatePosition()
         } else {
-            this.top -= 1.2;
+            this.top -= 1.5;
             this.updatePosition()
         }
     }

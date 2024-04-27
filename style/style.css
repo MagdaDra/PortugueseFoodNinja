@@ -1,4 +1,27 @@
+#game-start {
+    background-image: url("../images/lisbon-cartoon.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+
+#gamestart-whitebackground {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+}
+
+#gamestart-whitebackground p {
+    
+}
 
 #game-screen {
     display: none;
@@ -10,10 +33,14 @@
 
 }
 
+#game-container {
+    display: none;
+}
+
 #game-end {
     display: none;
 }
 
 .start-image {
-    width: 100px;
+    width: 200px;
 }

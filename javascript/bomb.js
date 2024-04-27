@@ -4,13 +4,12 @@ class Bomb extends MovingItem {
    
         this.element.className = "bombDiv";
         this.element.style.position = "absolute";
-        //this.wasClicked = false; 
 
-        this.element.addEventListener('click', () => {
-            this.game.removeBomb(this)
-            //this.wasClicked = true;
-            //return true;
-        });
+       this.element.addEventListener('click', () => {
+           this.game.removeBomb(this)
+           clearTimeout(this.game.bombIntervalId)
+           this.game.bombIntervalId = null;
+       });
         
 
         this.image = document.createElement("img");
@@ -26,15 +25,5 @@ class Bomb extends MovingItem {
             this.top -= 1;
             this.updatePosition()
     }
-
-/*     wasClicked() {
-        this.element.addEventListener('click', () => {
-            this.game.removeBomb(this)
-            //this.wasClicked = true;
-            return true;
-        })
-    } */
-
-
 
 }
