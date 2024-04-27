@@ -69,7 +69,7 @@ html {
 
 #game-screen {
     display: none;
-    align-content: center;
+    justify-content: center;
     position: relative;
     overflow: hidden; /* it prevents the objects from leaving the screen */
     background-image: url("../images/wood.jpg");
