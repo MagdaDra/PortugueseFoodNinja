@@ -10,7 +10,7 @@ class Game {
         this.bomb = [];
         this.life = [];
         this.score = 0;
-        this.lives = 50;
+        this.lives = 5;
         this.gameIsOver = false;
         this.gameIntervalId = null;
         this.gameLoopFrequency = Math.floor(1000/60)
