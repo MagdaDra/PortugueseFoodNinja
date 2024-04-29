@@ -42,7 +42,7 @@ class Food extends MovingItem {
         
 
         const image = document.createElement("img");
-        
+        image.draggable = false;
         image.src = this.imgsArray[Math.floor(this.imgsArray.length * Math.random())];
         image.style.width = `${this.width}px`
         this.element.appendChild(image);

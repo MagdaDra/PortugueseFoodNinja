@@ -15,6 +15,7 @@ class Bomb extends MovingItem {
         
 
         this.image = document.createElement("img");
+        this.image.draggable = false;
         this.image.src = "../images/bomb2.png"
 
         this.image.style.width = `${this.width}px`

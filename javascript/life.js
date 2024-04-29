@@ -12,6 +12,7 @@ class Life extends MovingItem {
         })
 
         this.image = document.createElement("img");
+        this.image.draggable = false;
         this.image.src = "../images/rooster3.png"
 
         this.image.style.width = `${this.width}px`
