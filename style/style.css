@@ -14,6 +14,16 @@ html {
     padding: 0;
     font-weight: lighter;
   }
+
+  @font-face {
+    src: url("../fonts/bruce.ttf");
+    font-family: "ninja1";
+  }
+
+  @font-face {
+    font-family: "ninja2";
+    src: url("../fonts/pdark.ttf");
+  }
   
   /*  Set the font */
   body {
@@ -22,34 +32,43 @@ html {
 
 
 #game-start {
-    background-image: url("../images/Lisbon.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 810px;
     display: flex;
     line-height: 1.5;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "ninja1";
+    background-color: rgb(255, 255, 255, 0.2);
+    
+
 
 }
 
-#gamestart-whitebackground {
-    background-color: white;
+#heading {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 600px;
-    height: 1000px;
-    padding-bottom: 150px;
+    width: 1500px;
 
 }
 
-#gamestart-whitebackground p{
+#game-start p{
     text-align: center;
     margin-top: 60px;
     margin-bottom: 60px;
+}
+
+#game-start h1 {
+    font-family: "ninja1";
+    font-size: 60px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+body {
+  background-image: url("../images/floral-wood.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 200px;
 }
 
 
@@ -60,10 +79,11 @@ html {
     background-size: cover;
     background-color: transparent;
     border: none;
-    height: 150px;
-    width: 200px;
+    height: 250px;
+    width: 300px;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 22px;
+    font-family: "ninja1"
     
 }
 
@@ -104,6 +124,9 @@ html {
 }
 
 .start-image {
-    width: 300px;
-    padding-top: 20px;
+    width: 140px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 30px;
+    /* padding-top: 20px; */
 }
