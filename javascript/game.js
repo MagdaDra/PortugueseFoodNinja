@@ -170,9 +170,9 @@ class Game {
     }
 
     updateLife() {
-        if( this.score === 80 && this.life.length < 1 ||
-            this.score === 180 && this.life.length < 1 ||
-            this.score === 280 && this.life.length < 1  
+        if( this.score === 150 && this.life.length < 1 ||
+            this.score === 300 && this.life.length < 1 ||
+            this.score === 450 && this.life.length < 1  
         ) {
 
             this.life.push(new Life(this.gameScreen, this))

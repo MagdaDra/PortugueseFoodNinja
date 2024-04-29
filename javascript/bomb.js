@@ -1,7 +1,9 @@
 class Bomb extends MovingItem {
     constructor (gameScreen, game){
         super(gameScreen, game)
-   
+        
+        this.width = 80;
+        this.height = 80;
         this.element.className = "bombDiv";
         this.element.style.position = "absolute";
 

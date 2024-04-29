@@ -96,6 +96,19 @@ body {
     
 }
 
+#restart-button {
+  background-image: url("../images/pastel-button2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  height: 250px;
+  width: 300px;
+  font-weight: 900;
+  font-size: 30px;
+  font-family: "ninja1";
+}
+
 
 #game-screen {
     display: none;
@@ -144,11 +157,12 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 100px;
     background-color: rgb(255, 255, 255, 0.85);
     width: 1360px;
-    height: 300px;
+    height: 500px;
+    font-size: 50px;
     font-family: "ninja1";
     border-radius: 20px;
     margin-left: 20px;
@@ -160,4 +174,8 @@ body {
     margin-top: 30px;
     margin-left: 30px;
     /* padding-top: 20px; */
+}
+
+.end-image {
+  width: 250px;
 }
