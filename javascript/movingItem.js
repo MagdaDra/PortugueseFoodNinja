@@ -2,10 +2,10 @@ class MovingItem {
     constructor(gameScreen, game) {    
     
         this.gameScreen = gameScreen;
-        this.left = Math.floor(Math.random() * 450 + 50);
+        this.left = Math.floor(Math.random() * 750 + 50);
         this.top = 600;
-        this.width = 50;
-        this.height = 50;
+        this.width = 110;
+        this.height = 110;
 
         
         this.element = document.createElement("div");

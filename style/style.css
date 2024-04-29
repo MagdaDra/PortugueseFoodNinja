@@ -28,9 +28,9 @@ html {
     justify-content: flex-start;
     align-items: center;
     font-family: "ninja1";
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255, 0.85);
     width: 1300px;
-    height: 600px;
+    height: 580px;
     margin-top: 110px;
     border-radius: 100px;
 
@@ -45,10 +45,12 @@ html {
 
 #bomb {
   width: 50px;
+  margin-top: 20px;
 }
 
 #rooster {
-  width: 60px;
+  width: 50px;
+  margin-top: 20px;
 }
 
 #game-start p{
@@ -94,18 +96,6 @@ body {
     
 }
 
-#circle {
-  .circle { 
-    width: 100px; 
-    height: 100px; 
-    line-height: 100px; 
-    border-radius: 50%; 
-    font-size: 50px; 
-    color: #fff; 
-    text-align: center; 
-    background: #000 
-  } 
-}
 
 #game-screen {
     display: none;
@@ -113,10 +103,12 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden; /* it prevents the objects from leaving the screen */
-    background-image: url("../images/wood.jpg");
+    /* background-image: url("../images/wood-copy\ copy.jpg"); */
     background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255, 0.9);
     background-size: cover;
     margin-top: 60px;
+    border-radius: 20px;
     /* don't put any padding here */
 
 }
@@ -124,9 +116,22 @@ body {
 #score-lives {
     display: flex;
     justify-content: space-between;
-    width: 600px;
-    margin-top: 20px;
+    width: 1400px;
+    font-size: 50px;
+    font-family: "ninja1";
+    margin-top: 40px;
 }
+
+.score-lives-frame {
+  background-color: rgb(255, 255, 255, 0.85);
+  width: 650px;
+  height: 90px;
+  border-radius: 20px;
+  padding-top: 15px;
+  text-align: center;
+  margin: 0 20px;
+}
+
 
 #game-container {
     display: none;
@@ -141,6 +146,12 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+    background-color: rgb(255, 255, 255, 0.85);
+    width: 1360px;
+    height: 300px;
+    font-family: "ninja1";
+    border-radius: 20px;
+    margin-left: 20px;
 }
 
 .start-image {

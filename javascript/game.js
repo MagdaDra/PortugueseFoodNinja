@@ -5,7 +5,7 @@ class Game {
         this.gameContainer = document.getElementById("game-container")
         this.gameEndScreen = document.getElementById("game-end")
         this.height = 600;
-        this.width = 600;
+        this.width = 900;
         this.food = [];
         this.bomb = [];
         this.life = [];
@@ -204,6 +204,6 @@ class Game {
         //Show end game screen
         this.gameEndScreen.style.display = "flex"
         let messageDisplayed = document.getElementById("game-end-message");
-        messageDisplayed.innerHTML = "You lost!";
+        messageDisplayed.innerHTML = "Game over";
         }
 }

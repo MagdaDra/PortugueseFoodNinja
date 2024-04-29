@@ -13,7 +13,7 @@ class Bomb extends MovingItem {
         
 
         this.image = document.createElement("img");
-        this.image.src = "../images/bomb.png"
+        this.image.src = "../images/bomb2.png"
 
         this.image.style.width = `${this.width}px`
         this.element.appendChild(this.image);
