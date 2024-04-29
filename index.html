@@ -7,7 +7,7 @@
     <title>Portuguese Food Ninja</title>
 </head>
 <body>
-    <main>
+    <main id = "main">
         <!-- Start Screen - Initially shown on the screen-->
         <div id="game-start"> 
 
@@ -15,8 +15,14 @@
                     <h1>Portuguese Food Ninja</h1>
                     <img src="./images/ninja.png" alt="" class="start-image">
                 </div>
-                <p>Click on all the food that appears on the screen. You have 3 lives. <br />If you miss a food, you loose a life. When a bomb appears you have <br /> 5 seconds to click it, otherwise you loose.<br /> If you click a rooster, you gain a life.</p>
-                <button id="start-button">Start Game</button>
+                <div id = "instructions">
+                    <div id=" paragraphs">
+                        <p>Click on all the food that appears on the screen. You have 3 lives. If you miss a food, you loose a life.</p> 
+                        <p> <img id = "bomb" src="./images/bomb2.png"> When a bomb appears you have 5 seconds to click it, otherwise it explodes and ends a game. </p>
+                        <p> <img id = "rooster" src="./images/gallo.png"> If you click a rooster, you gain a life.</p>
+                    </div>
+                    <button id="start-button"><span id="circle">Start Game</span></button>
+                </div>
             
         </div>
 

@@ -20,26 +20,19 @@ html {
     font-family: "ninja1";
   }
 
-  @font-face {
-    font-family: "ninja2";
-    src: url("../fonts/pdark.ttf");
-  }
-  
-  /*  Set the font */
-  body {
-    font-family: "Helvetica", sans-serif;
-  }
-
 
 #game-start {
     display: flex;
     line-height: 1.5;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-family: "ninja1";
-    background-color: rgb(255, 255, 255, 0.2);
-    
+    background-color: rgb(255, 255, 255, 0.7);
+    width: 1300px;
+    height: 600px;
+    margin-top: 110px;
+    border-radius: 100px;
 
 
 }
@@ -47,14 +40,27 @@ html {
 #heading {
     display: flex;
     justify-content: center;
-    width: 1500px;
+    margin-bottom: 50px;
+}
 
+#bomb {
+  width: 50px;
+}
+
+#rooster {
+  width: 60px;
 }
 
 #game-start p{
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    font-size: 22px;
+    width: 700px;
+}
+
+
+#instructions {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
 }
 
 #game-start h1 {
@@ -68,7 +74,8 @@ body {
   background-image: url("../images/floral-wood.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -85,6 +92,19 @@ body {
     font-size: 22px;
     font-family: "ninja1"
     
+}
+
+#circle {
+  .circle { 
+    width: 100px; 
+    height: 100px; 
+    line-height: 100px; 
+    border-radius: 50%; 
+    font-size: 50px; 
+    color: #fff; 
+    text-align: center; 
+    background: #000 
+  } 
 }
 
 #game-screen {
