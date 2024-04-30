@@ -5,20 +5,28 @@ class Bomb extends MovingItem {
         this.width = 80;
         this.height = 80;
         this.element.className = "bombDiv";
-        this.element.style.position = "absolute";
+        this.element.style.position = "absolute"
+        this.bombSound = new Audio("../audio/clock-ticking.mp3")
+        this.bombSound.play()
+        
 
        this.element.addEventListener('click', () => {
-           this.game.removeBomb(this)
-           clearTimeout(this.game.bombIntervalId)
+           this.game.removeBomb(this);
+           clearTimeout(this.game.bombIntervalId);
            this.game.bombIntervalId = null;
-       });
+           this.bombSound.pause();
+        });
+
+       this.soundIntervalId = setTimeout(() => {
+        this.bombSound.remove()
+        }, 5000)
         
 
         this.image = document.createElement("img");
         this.image.draggable = false;
-        this.image.src = "../images/bomb2.png"
+        this.image.src = "../images/bomb2.png";
 
-        this.image.style.width = `${this.width}px`
+        this.image.style.width = `${this.width}px`;
         this.element.appendChild(this.image);
 
     }
@@ -26,7 +34,7 @@ class Bomb extends MovingItem {
     move() {
 //        console.log("bomb moving", this.top, this.left)
             this.top -= 1;
-            this.updatePosition()
+            this.updatePosition();
     }
 
 }

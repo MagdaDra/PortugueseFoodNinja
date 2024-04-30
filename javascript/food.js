@@ -4,9 +4,12 @@ class Food extends MovingItem {
     
         this.element.className = "foodDiv";
         this.element.style.position = "absolute";
+        let foodSound = new Audio("../audio/cutting-board.mp3")
         this.element.addEventListener('click', (e) => {
             this.game.removeFood(this)
-            console.log(e.currentTarget)
+            foodSound.play()
+            /* console.log(e.currentTarget) */
+            
         })
         
         this.imgsArray = [];

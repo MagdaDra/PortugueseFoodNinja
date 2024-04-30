@@ -76,8 +76,10 @@ body {
   background-image: url("../images/floral-wood.webp");
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-position: center; */
   display: flex;
   justify-content: center;
+  cursor: url("../images/knife-turned.001.png"), auto;
 }
 
 

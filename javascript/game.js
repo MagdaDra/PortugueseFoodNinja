@@ -16,6 +16,7 @@ class Game {
         this.gameLoopFrequency = Math.floor(1000/60)
         this.bombIntervalId = null;
         
+        
     }
 
     start(){
@@ -163,9 +164,13 @@ class Game {
             
             if(this.bombIntervalId === null){
                 this.bombIntervalId = setTimeout(() => {
+                    let explosionSound = new Audio("../audio/hq-explosion.mp3")
+                    explosionSound.play()
                     this.endGame()
                 }, 5000)
+                
             }
+            console.log(bombItem)
         }
     }
 
@@ -205,5 +210,8 @@ class Game {
         this.gameEndScreen.style.display = "flex"
         let messageDisplayed = document.getElementById("game-end-message");
         messageDisplayed.innerHTML = "Game over";
+
+
+        
         }
 }
