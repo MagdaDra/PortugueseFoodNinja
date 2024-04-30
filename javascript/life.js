@@ -22,7 +22,7 @@ class Life extends MovingItem {
 
     move() {
 
-            this.top -= 1.5;
+            this.top -= 1.6;
             this.updatePosition()
     }
 

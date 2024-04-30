@@ -180,12 +180,22 @@ body {
   width: 250px;
 }
 
-/* .foodDiv{
-  user-drag: none;
-  -webkit-user-drag: none;
-  
+.foodDiv{
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-} */
+}
+.bombDiv{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.lifeDiv{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+

@@ -57,8 +57,16 @@ class Food extends MovingItem {
             this.top -= 1;
             this.updatePosition()
         } 
-        if (this.game.score >= 150){
+        if (this.game.score >= 150 && this.game.score < 800){
             this.top -= 1.2;
+            this.updatePosition()
+        }
+        if (this.game.score >= 800 && this.game.score < 1500){
+            this.top -= 1.8;
+            this.updatePosition()
+        }
+        if (this.game.score >= 1500){
+            this.top -= 2;
             this.updatePosition()
         }
     }
