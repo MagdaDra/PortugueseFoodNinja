@@ -14,9 +14,7 @@ class Game {
         this.gameIsOver = false;
         this.gameIntervalId = null;
         this.gameLoopFrequency = Math.floor(1000/60)
-        this.bombIntervalId = null;
-        
-        
+        this.bombIntervalId = null; 
     }
 
     start(){
@@ -210,8 +208,6 @@ class Game {
         this.gameEndScreen.style.display = "flex"
         let messageDisplayed = document.getElementById("game-end-message");
         messageDisplayed.innerHTML = "Game over";
-
-
         
         }
 }

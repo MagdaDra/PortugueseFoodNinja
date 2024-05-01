@@ -8,6 +8,10 @@ class Bomb extends MovingItem {
         this.element.style.position = "absolute"
         this.bombSound = new Audio("../audio/clock-ticking.mp3")
         this.bombSound.play()
+
+        setTimeout(() => {
+            this.bombSound.pause()
+            }, 5000)
         
 
        this.element.addEventListener('click', () => {
@@ -16,10 +20,6 @@ class Bomb extends MovingItem {
            this.game.bombIntervalId = null;
            this.bombSound.pause();
         });
-
-       this.soundIntervalId = setTimeout(() => {
-        this.bombSound.remove()
-        }, 5000)
         
 
         this.image = document.createElement("img");
@@ -30,6 +30,7 @@ class Bomb extends MovingItem {
         this.element.appendChild(this.image);
 
     }
+
 
     move() {
 //        console.log("bomb moving", this.top, this.left)
