@@ -28,6 +28,9 @@ class Game {
         this.gameContainer.style.display = "flex"
         this.gameScreen.style.display = "flex"
 
+        //change background position in the game screen
+        document.body.style.backgroundPosition = "center";
+
         //remove the endScreen from the page
         this.gameEndScreen.style.display = "none"
 
@@ -209,6 +212,8 @@ class Game {
         this.gameEndScreen.style.display = "flex"
         let messageDisplayed = document.getElementById("game-end-message");
         messageDisplayed.innerHTML = "Game over";
+        //Change background position in the ned screen
+        document.body.style.backgroundPosition = "top";
         
         }
 }

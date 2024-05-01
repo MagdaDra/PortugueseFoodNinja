@@ -15,7 +15,7 @@ class Food extends MovingItem {
         this.imgsArray = [];
         const pastel = "../images/pastel-button2.png";
         const wine = "../images/wine2.png";
-        const bacalhau = "../images/bacalhau.png";
+        const bacalhauABras = "../images/bacalhau-a-bras.png";
         const olive = "../images/olive-oil.png";
         const sardines= "../images/sardinhas.png";
         const superbock = "../images/superbock-bottles.svg";
@@ -23,24 +23,27 @@ class Food extends MovingItem {
         
 
 
-        if (game.score < 50){
+        if (game.score < 100){
            this.imgsArray.push(pastel)
         }
         
-        if (game.score >= 50 && game.score < 100) {
+        if (game.score >= 100 && game.score < 200) {
             this.imgsArray.push(pastel, wine)
         } 
-        if (game.score >= 100 && game.score < 150) {
+        if (game.score >= 200 && game.score < 300) {
             this.imgsArray.push(pastel, wine, sardines)
         }
-        if (game.score >= 150 && game.score < 200) {
+        if (game.score >= 300 && game.score < 400) {
             this.imgsArray.push(pastel, wine, sardines, francesinha)
         }
-        if (game.score >= 200 && game.score < 250) {
+        if (game.score >= 400 && game.score < 500) {
             this.imgsArray.push(pastel, wine, sardines, francesinha, olive)
         }
-        if (game.score >= 250) {
+        if (game.score >= 500 && game.score < 600) {
             this.imgsArray.push(pastel, wine, sardines, olive, francesinha, superbock)
+        }
+        if (game.score >= 600) {
+            this.imgsArray.push(pastel, wine, sardines, olive, francesinha, superbock, bacalhauABras)
         }
         
 
