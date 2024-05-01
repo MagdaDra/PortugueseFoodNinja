@@ -45,7 +45,6 @@ class Game {
            this.bomb.push(new Bomb(this.gameScreen, this))
         }, 10000)
 
-        console.log('start function')
 
         //start the loop
         this.gameIntervalId = setInterval(() => {
@@ -159,6 +158,7 @@ class Game {
             const bombItem = this.bomb[i]
 
             bombItem.move();
+
             
             if(this.bombIntervalId === null){
                 this.bombIntervalId = setTimeout(() => {
@@ -173,9 +173,10 @@ class Game {
     }
 
     updateLife() {
-        if( this.score === 150 && this.life.length < 1 ||
-            this.score === 300 && this.life.length < 1 ||
-            this.score === 450 && this.life.length < 1  
+        if( this.score === 500 && this.life.length < 1 ||
+            this.score === 1000 && this.life.length < 1 ||
+            this.score === 1500 && this.life.length < 1  ||
+            this.score === 2000 && this.life.length < 1 
         ) {
 
             this.life.push(new Life(this.gameScreen, this))

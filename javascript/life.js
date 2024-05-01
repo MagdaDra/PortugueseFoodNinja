@@ -5,8 +5,10 @@ class Life extends MovingItem {
         this.width = 70;
         this.element.className = "lifeDiv";
         this.element.style.position = "absolute";
+        this.roosterSound = new Audio("../audio/rooster-cry-173621.mp3")
         this.element.addEventListener('click', (e) => {
             this.game.removeLife(this)
+            this.roosterSound.play()
             console.log(e.currentTarget)
 
         })
@@ -22,7 +24,7 @@ class Life extends MovingItem {
 
     move() {
 
-            this.top -= 1.6;
+            this.top -= 2.5;
             this.updatePosition()
     }
 

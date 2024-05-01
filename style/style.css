@@ -3,6 +3,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+    cursor: url("../images/knife-turned.001.png"), auto;
   }
   
   *, *:before, *:after {
@@ -78,7 +79,7 @@ body {
   /* background-position: center; */
   display: flex;
   justify-content: center;
-  cursor: url("../images/knife-turned.001.png"), auto;
+
 }
 
 
@@ -182,9 +183,6 @@ body {
     /* padding-top: 20px; */
 }
 
-.end-image {
-  width: 250px;
-}
 
 .foodDiv{
   user-select: none;

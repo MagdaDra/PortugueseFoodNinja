@@ -12,6 +12,10 @@ class Bomb extends MovingItem {
         setTimeout(() => {
             this.bombSound.pause()
             }, 5000)
+
+/*         if(this.game.gameIsOver === true) {
+           this.bombSound.pause()
+            } */  
         
 
        this.element.addEventListener('click', () => {
