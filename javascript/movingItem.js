@@ -2,7 +2,7 @@ class MovingItem {
     constructor(gameScreen, game) {    
     
         this.gameScreen = gameScreen;
-        this.left = Math.floor(Math.random() * 640 + 50);
+        this.left = Math.floor(Math.random() * 660 + 60);
         this.top = 600;
         this.width = 110;
         this.height = 110;
