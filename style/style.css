@@ -188,6 +188,7 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
 .bombDiv{
   user-select: none;
   -moz-user-select: none;

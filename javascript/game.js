@@ -15,9 +15,13 @@ class Game {
         this.gameIntervalId = null;
         this.gameLoopFrequency = Math.floor(1000/60)
         this.bombIntervalId = null; 
+        this.bombGenerationInterval = null;
+        //this.isRunning = false;
     }
 
     start(){
+        this.isRunning = true;
+
         this.gameScreen.style.width = `${this.width}px`
         this.gameScreen.style.height = `${this.height}px`
 
@@ -44,7 +48,7 @@ class Game {
         scoreDisplayed.innerHTML = 0;
 
         //create bombs
-        setInterval(() => {
+        this.bombGenerationInterval = setInterval(() => {
            this.bomb.push(new Bomb(this.gameScreen, this))
         }, 10000)
 
@@ -53,14 +57,17 @@ class Game {
         this.gameIntervalId = setInterval(() => {
             this.gameLoop()
         }, this.gameLoopFrequency)
+
     }
 
 
 
     gameLoop(){
-        this.update()
-        this.updateBomb()
-        this.updateLife()
+        if(this.isRunning){
+            this.update()
+            this.updateBomb()
+            this.updateLife()
+        }
         if(this.gameIsOver){
             clearInterval(this.gameIntervalId)
         }
@@ -171,7 +178,6 @@ class Game {
                 }, 5000)
                 
             }
-            console.log(bombItem)
         }
     }
 
@@ -195,10 +201,16 @@ class Game {
 
 
     endGame(){
+        //stop the game
+        //this.isRunning = false;
         //remove food from the DOM
         this.food.forEach(foodItem => foodItem.element.remove())
         this.foodItem = []
         //remove bomb from the DOM
+        clearInterval(this.bombGenerationInterval)
+        if(this.bomb.length){
+            this.bomb[0].bombSound.pause()
+        }
         this.bomb.forEach(bombItem => bombItem.element.remove())
         this.bombItem = []
         // remove life from the DOM
@@ -212,7 +224,7 @@ class Game {
         this.gameEndScreen.style.display = "flex"
         let messageDisplayed = document.getElementById("game-end-message");
         messageDisplayed.innerHTML = "Game over";
-        //Change background position in the ned screen
+        //Change background position in the end screen
         document.body.style.backgroundPosition = "top";
         
         }

@@ -9,15 +9,6 @@ class Bomb extends MovingItem {
         this.bombSound = new Audio("../audio/clock-ticking.mp3")
         this.bombSound.play()
 
-        setTimeout(() => {
-            this.bombSound.pause()
-            }, 5000)
-
-/*         if(this.game.gameIsOver === true) {
-           this.bombSound.pause()
-            } */  
-        
-
        this.element.addEventListener('click', () => {
            this.game.removeBomb(this);
            clearTimeout(this.game.bombIntervalId);
