@@ -1,7 +1,7 @@
 PortugueseFoodNinja
 
-This game was developed as the first project of Ironhack Web Dev Bootcamp.
+PortugueseFoodNinja is a clicking game, written in JavaScript, developed as the first project of Ironhack Web Dev Bootcamp.
 
-Languages and tools: JavaScript, CSS, HTML, DOM Manipulation
+Languages and tools: JavaScript, HTML, CSS, DOM Manipulation
 
 Play: https://pt-foodninja.netlify.app 
